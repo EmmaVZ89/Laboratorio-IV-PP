@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ListadoProductosPublicoComponent } from './components/listado-productos-publico/listado-productos-publico.component';
 import { CanActivateLogueoGuard } from './guards/can-activate-logueo.guard';
 import { AltaProductoComponent } from './pages/alta-producto/alta-producto.component';
 import { BienvenidaComponent } from './pages/bienvenida/bienvenida.component';
@@ -17,6 +18,10 @@ const routes: Routes = [
     path: 'detalle-producto',
     component: DetalleProductoComponent,
     canActivate: [CanActivateLogueoGuard],
+  },
+  {
+    path: 'listado-producto-publico',
+    component: ListadoProductosPublicoComponent,
   },
   { path: '', component: BienvenidaComponent },
 ];

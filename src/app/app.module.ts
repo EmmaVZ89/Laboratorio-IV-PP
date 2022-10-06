@@ -23,6 +23,7 @@ import { DetalleProductoComponent } from './pages/detalle-producto/detalle-produ
 import { ListadoProductosComponent } from './components/listado-productos/listado-productos.component';
 import { InformacionProductoComponent } from './components/informacion-producto/informacion-producto.component';
 import { InformacionPaisComponent } from './components/informacion-pais/informacion-pais.component';
+import { ListadoProductosPublicoComponent } from './components/listado-productos-publico/listado-productos-publico.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { InformacionPaisComponent } from './components/informacion-pais/informac
     DetalleProductoComponent,
     ListadoProductosComponent,
     InformacionProductoComponent,
-    InformacionPaisComponent
+    InformacionPaisComponent,
+    ListadoProductosPublicoComponent
   ],
   imports: [
     BrowserModule,
