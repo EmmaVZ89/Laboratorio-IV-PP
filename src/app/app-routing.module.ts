@@ -24,7 +24,7 @@ const routes: Routes = [
   {
     path: 'container',
     component: ContainerComponent,
-    canActivate: [CanActivateAdministradorGuard],
+    // canActivate: [CanActivateAdministradorGuard],
   },
   {
     path: 'listado-producto-publico',

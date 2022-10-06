@@ -1,23 +1,23 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Container } from 'src/app/clases/container';
 import { EntidadesService } from 'src/app/services/entidades.service';
 
 @Component({
-  selector: 'app-form-alta-container',
-  templateUrl: './form-alta-container.component.html',
-  styleUrls: ['./form-alta-container.component.scss'],
+  selector: 'app-form-modificacion-container',
+  templateUrl: './form-modificacion-container.component.html',
+  styleUrls: ['./form-modificacion-container.component.scss']
 })
-export class FormAltaContainerComponent implements OnInit {
-  @Output() PasamosUnContainer: EventEmitter<Container> = new EventEmitter<Container>();
-  listadoContainers: Container[] = [];
+export class FormModificacionContainerComponent implements OnInit {
+
+  @Input() containerAModificar?: Container;
+
   nuevoContainer: Container = new Container(0, 'negro', '', 100);
+
   //@ts-ignore
   forma: FormGroup;
-  constructor(
-    private formBuilder: FormBuilder,
-    private entidadesService: EntidadesService
-  ) {}
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.forma = this.formBuilder.group({
@@ -25,11 +25,6 @@ export class FormAltaContainerComponent implements OnInit {
       color: ['', Validators.required],
       empresa: ['', Validators.required],
       capacidad: ['', Validators.required],
-    });
-    this.entidadesService.traerContainers().subscribe((containers) => {
-      if (containers != null) {
-        this.listadoContainers = containers;
-      }
     });
   }
 
@@ -39,14 +34,14 @@ export class FormAltaContainerComponent implements OnInit {
       this.nuevoContainer.color = this.forma.getRawValue().color;
       this.nuevoContainer.empresa = this.forma.getRawValue().empresa;
       this.nuevoContainer.capacidad = this.forma.getRawValue().capacidad;
-      this.entidadesService.crearContainer(this.nuevoContainer);
-      this.PasamosUnContainer.emit(this.nuevoContainer);
+      // this.entidadesService.crearContainer(this.nuevoContainer);
       this.nuevoContainer = new Container(0, 'negro', '', 100);
       this.forma.reset();
-      console.log('AGREGADO CON EXITO');
+      console.log('MODIFICADO CON EXITO');
     } else {
       console.log('FORM INVALIDO');
     }
   }
+
 
 }

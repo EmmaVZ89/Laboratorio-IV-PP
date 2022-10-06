@@ -26,6 +26,8 @@ import { InformacionPaisComponent } from './components/informacion-pais/informac
 import { ListadoProductosPublicoComponent } from './components/listado-productos-publico/listado-productos-publico.component';
 import { ContainerComponent } from './pages/container/container.component';
 import { FormAltaContainerComponent } from './components/form-alta-container/form-alta-container.component';
+import { ListadoContainersComponent } from './components/listado-containers/listado-containers.component';
+import { FormModificacionContainerComponent } from './components/form-modificacion-container/form-modificacion-container.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { FormAltaContainerComponent } from './components/form-alta-container/for
     InformacionPaisComponent,
     ListadoProductosPublicoComponent,
     ContainerComponent,
-    FormAltaContainerComponent
+    FormAltaContainerComponent,
+    ListadoContainersComponent,
+    FormModificacionContainerComponent
   ],
   imports: [
     BrowserModule,

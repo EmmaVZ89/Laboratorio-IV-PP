@@ -1,16 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { Container } from 'src/app/clases/container';
 
 @Component({
   selector: 'app-container',
   templateUrl: './container.component.html',
-  styleUrls: ['./container.component.scss']
+  styleUrls: ['./container.component.scss'],
 })
 export class ContainerComponent implements OnInit {
-
   
-  constructor() { }
+  containerRecibido: Container = new Container(0, 'negro', '', 100);
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  tomarContainerEnviado(event: any) {
+    console.log(event);
   }
 
+  tomarContainerActivo(event: any) {
+    console.log(event);
+  }
 }
