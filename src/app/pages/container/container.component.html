@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div class="container py-3">
+  <main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">ALTA CONTAINER</h4>
+          </div>
+          <div class="card-body">
+            <!-- <app-alta-pedido
+              (PasamosUnPedido)="tomarPedidoEnviado($event)"
+            ></app-alta-pedido> -->
+            <app-form-alta-container></app-form-alta-container>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">MODIFICACIÓN CONTAINER</h4>
+          </div>
+          <!-- <app-modificacion-pedido
+            [pedidoAModificar]="pedidoTablaActivo"
+          ></app-modificacion-pedido> -->
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">ELIMINAR CONTAINER</h4>
+            </div>
+            <!-- <app-modificacion-pedido
+              [pedidoAModificar]="pedidoTablaActivo"
+            ></app-modificacion-pedido> -->
+          </div>
+        </div>
+    </div>
+
+    <h2 class="display-6 text-center mb-4">LISTADO CONTAINERS</h2>
+    <!-- <app-listado-pedidos-sin-entregar
+      (PasamosUnPedido)="tomarPedidoTabla($event)"
+    ></app-listado-pedidos-sin-entregar> -->
+  </main>
+</div>

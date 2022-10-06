@@ -24,6 +24,8 @@ import { ListadoProductosComponent } from './components/listado-productos/listad
 import { InformacionProductoComponent } from './components/informacion-producto/informacion-producto.component';
 import { InformacionPaisComponent } from './components/informacion-pais/informacion-pais.component';
 import { ListadoProductosPublicoComponent } from './components/listado-productos-publico/listado-productos-publico.component';
+import { ContainerComponent } from './pages/container/container.component';
+import { FormAltaContainerComponent } from './components/form-alta-container/form-alta-container.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { ListadoProductosPublicoComponent } from './components/listado-productos
     ListadoProductosComponent,
     InformacionProductoComponent,
     InformacionPaisComponent,
-    ListadoProductosPublicoComponent
+    ListadoProductosPublicoComponent,
+    ContainerComponent,
+    FormAltaContainerComponent
   ],
   imports: [
     BrowserModule,

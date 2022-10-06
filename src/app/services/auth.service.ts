@@ -9,6 +9,7 @@ import { of, switchMap } from 'rxjs';
 export class AuthService {
   usuario: any;
   estaLogueado: boolean = false;
+  esAdministrador: boolean = false;
 
   constructor(
     private angularFireAuth: AngularFireAuth,
@@ -16,7 +17,7 @@ export class AuthService {
   ) {
     this.usuario = this.angularFireAuth.authState.pipe(
       switchMap((usuarioRes: any) => {
-        if (usuarioRes) {
+        if (usuarioRes) {         
           this.estaLogueado = true;
           return this.angularFirestore
             .doc<any>(`usuario/${usuarioRes.uid}`)
@@ -70,11 +71,11 @@ export class AuthService {
   cerrarSesion() {
     this.angularFireAuth.signOut();
     this.estaLogueado = false;
+    this.esAdministrador = false;
     console.log('Sesión cerrada!');
   }
 
   traerUsuarioLogueado() {
     return this.angularFireAuth.authState;
   }
-
 }
