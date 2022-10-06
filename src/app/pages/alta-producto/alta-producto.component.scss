@@ -1,0 +1,23 @@
+main,
+.container {
+  font-family: "Poppins", sans-serif;
+  background: rgb(166, 227, 153);
+  background: linear-gradient(
+    215deg,
+    rgba(166, 227, 153, 0.5) 16%,
+    rgba(5, 182, 203, 0.5) 66%,
+    rgba(250, 125, 109, 0.5) 66%
+  );
+  min-height: 100vh;
+}
+
+.container {
+  background: rgb(166, 227, 153);
+  background: linear-gradient(
+    215deg,
+    rgba(166, 227, 153, 0.5) 16%,
+    rgba(5, 182, 203, 0.5) 66%,
+    rgba(250, 125, 109, 0.5) 66%
+  );
+  min-width: 100vw;
+}

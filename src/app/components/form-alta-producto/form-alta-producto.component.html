@@ -1,0 +1,144 @@
+<form [formGroup]="forma" (ngSubmit)="agregarProducto()">
+  <h4 class="mb-3 text-primary">DATOS PRODUCTO</h4>
+  <div class="row g-3">
+    <!-- CONTROL CODIGO -->
+    <div class="col-md-3">
+      <label for="codigo" class="form-label">Código</label>
+      <input
+        type="number"
+        formControlName="codigo"
+        class="form-control"
+        formControlName="codigo"
+        required
+      />
+      <small
+        style="color: red; font-weight: bolder; text-shadow: 1px 1px 1px #000"
+        *ngIf="
+                      forma.controls['codigo'].errors?.['required'] &&
+                      forma.controls['codigo'].touched
+                    "
+      >
+        El Código es requerido
+      </small>
+    </div>
+    <!-- CONTROL DESCRIPCION -->
+    <div class="col-sm-6">
+      <label for="descripcion" class="form-label">Descripción</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="descripcion"
+        required
+      />
+      <small
+        style="color: red; font-weight: bolder; text-shadow: 1px 1px 1px #000"
+        *ngIf="
+                      forma.controls['descripcion'].errors?.['required'] &&
+                      forma.controls['descripcion'].touched
+                    "
+      >
+        La descripción es requerida
+      </small>
+    </div>
+    <!-- CONTROL PRECIO -->
+    <div class="col-md-3">
+      <label for="precio" class="form-label">Precio</label>
+      <input
+        type="number"
+        formControlName="precio"
+        class="form-control"
+        formControlName="precio"
+        required
+      />
+      <small
+        style="color: red; font-weight: bolder; text-shadow: 1px 1px 1px #000"
+        *ngIf="
+                      forma.controls['precio'].errors?.['required'] &&
+                      forma.controls['precio'].touched
+                    "
+      >
+        El Precio es requerido
+      </small>
+    </div>
+    <!-- CONTROL STOCK -->
+    <div class="col-md-3">
+      <label for="stock" class="form-label">Stock</label>
+      <input
+        type="number"
+        formControlName="stock"
+        class="form-control"
+        formControlName="stock"
+        required
+      />
+      <small
+        style="color: red; font-weight: bolder; text-shadow: 1px 1px 1px #000"
+        *ngIf="
+                                    forma.controls['stock'].errors?.['required'] &&
+                                    forma.controls['stock'].touched
+                                  "
+      >
+        El stock es requerido
+      </small>
+    </div>
+    <!-- CONTROL COMESTIBLE -->
+    <div class="col-md-5" style="width: contain">
+      <label for="comestible" class="form-label">¿Comestible? </label><br />
+      <select id="comestible" formControlName="comestible" required>
+        <option value="">Seleccione uno</option>
+        <option value="si">SI</option>
+        <option value="no">NO</option>
+      </select>
+      <br />
+      <small
+        style="color: red; font-weight: bolder; text-shadow: 1px 1px 1px #000"
+        *ngIf="
+                      forma.controls['comestible'].errors?.['required'] &&
+                      forma.controls['comestible'].touched
+                    "
+      >
+        Comestible es requerido
+      </small>
+    </div>
+    <!-- CONTROL PAIS -->
+    <div class="col-sm-6">
+      <label for="paisOrigen" class="form-label">Pais</label>
+      <div style="display: flex">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="paisOrigen"
+          [ngModel]="paisForm?.name.common"
+          required
+          readonly
+        />
+        <img
+          *ngIf="paisForm?.flags.png"
+          style="
+            margin-left: 1rem;
+            width: 50px;
+            height: 50px;
+            border: 3px solid #000;
+            border-radius: 50%;
+          "
+          src="{{ paisForm?.flags.png }}"
+          alt=""
+        />
+      </div>
+      <small
+        style="color: red; font-weight: bolder; text-shadow: 1px 1px 1px #000"
+        *ngIf="
+                                forma.controls['paisOrigen'].errors?.['required'] &&
+                                forma.controls['paisOrigen'].touched
+                              "
+      >
+        El pais es requerido
+      </small>
+    </div>
+  </div>
+
+  <hr class="my-4" />
+
+  <button class="w-100 btn btn-primary btn-lg" type="submit">
+    Registrar Producto
+  </button>
+</form>

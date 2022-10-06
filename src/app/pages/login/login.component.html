@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+<section class="contenedor-login">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <form>
+        <h1>LOGIN</h1>
+        <p>
+          Complete los campos para iniciar sesión o ingrese como
+          <input
+            style="
+              margin: 0;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-right: 10px;
+            "
+            type="button"
+            class="fadeIn fourth"
+            value="Empleado"
+            (click)="llenarCampos(2)"
+          />
+          ó
+          <input
+            style="margin: 0; padding: 5px 15px; margin-left: 10px"
+            type="button"
+            class="fadeIn fourth"
+            value="Admin"
+            (click)="llenarCampos(1)"
+          />
+        </p>
+        <div class="input-container">
+          <input
+            type="email"
+            id="login"
+            class="fadeIn second"
+            name="email"
+            placeholder="Dirección de email"
+            [(ngModel)]="usuarioForm.email"
+            required
+          />
+        </div>
+
+        <div class="input-container">
+          <input
+            type="password"
+            id="password1"
+            class="fadeIn third"
+            name="clave1"
+            placeholder="Contraseña"
+            [(ngModel)]="usuarioForm.password"
+            required
+          />
+        </div>
+
+        <input
+          type="submit"
+          class="fadeIn fourth"
+          value="Ingresar"
+          (click)="iniciarSesion()"
+        />
+      </form>
+    </div>
+  </div>
+</section>

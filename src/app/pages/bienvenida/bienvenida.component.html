@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="home-container">
+    <div class="wrapper fadeInDown">
+      <div class="row" id="formContent">
+        <div class="col col-img">
+          <img class="img" src="{{ miPerfil.avatar_url }}" alt="" />
+        </div>
+        <div class="col">
+          <div class="welcome">
+            <h3>{{ miPerfil.name }}</h3>
+            <h3>División: 4° A</h3>
+            <h2 style="padding-top: 2rem">PRIMER PARCIAL LABORATORIO IV</h2>
+            <p>Seguidores: {{miPerfil.followers}}</p>
+            <p>Siguiendo: {{miPerfil.following}}</p>
+            <p>Ubicación: {{miPerfil.location}}</p>
+            <p>Repositorios: {{miPerfil.public_repos}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
