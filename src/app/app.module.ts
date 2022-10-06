@@ -19,6 +19,10 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AltaProductoComponent } from './pages/alta-producto/alta-producto.component';
 import { FormAltaProductoComponent } from './components/form-alta-producto/form-alta-producto.component';
 import { ListadoPaisesComponent } from './components/listado-paises/listado-paises.component';
+import { DetalleProductoComponent } from './pages/detalle-producto/detalle-producto.component';
+import { ListadoProductosComponent } from './components/listado-productos/listado-productos.component';
+import { InformacionProductoComponent } from './components/informacion-producto/informacion-producto.component';
+import { InformacionPaisComponent } from './components/informacion-pais/informacion-pais.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { ListadoPaisesComponent } from './components/listado-paises/listado-pais
     LoginComponent,
     AltaProductoComponent,
     FormAltaProductoComponent,
-    ListadoPaisesComponent
+    ListadoPaisesComponent,
+    DetalleProductoComponent,
+    ListadoProductosComponent,
+    InformacionProductoComponent,
+    InformacionPaisComponent
   ],
   imports: [
     BrowserModule,
